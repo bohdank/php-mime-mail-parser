@@ -1,5 +1,5 @@
 {
-	"name": "messaged/php-mime-mail-parser",
+	"name": "bohdank/php-mime-mail-parser",
 	"description": "Mailparse extension wrapper for PHP 5.3+",
 	"keywords": ["mailparse", "mime", "mail", "MimeMailParser"],
 	"homepage": "http://github.com/bohdank/php-mime-mail-parser",
