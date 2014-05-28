@@ -203,7 +203,8 @@ class Parser
 		$body = false;
 		$mime_types = array(
 			'text' => 'text/plain',
-			'html' => 'text/html'
+			'html' => 'text/html',
+			'calendar' => 'text/calendar'
 		);
 		if (in_array($type, array_keys($mime_types))) {
 			foreach ($this->parts as $part) {
@@ -213,7 +214,7 @@ class Parser
 				}
 			}
 		} else {
-			throw new RuntimeException('Invalid type specified for Parser::getMessageBody. "type" can either be text or html.');
+			throw new RuntimeException('Invalid type specified for Parser::getMessageBody. "type" can either be text, html or calendar.');
 		}
 		return $body;
 	}
@@ -228,7 +229,8 @@ class Parser
 		$headers = false;
 		$mime_types = array(
 			'text' => 'text/plain',
-			'html' => 'text/html'
+			'html' => 'text/html',
+			'calendar' => 'text/calendar'
 		);
 		if (in_array($type, array_keys($mime_types))) {
 			foreach ($this->parts as $part) {
@@ -237,7 +239,7 @@ class Parser
 				}
 			}
 		} else {
-			throw new RuntimeException('Invalid type specified for Parser::getMessageBody. "type" can either be text or html.');
+			throw new RuntimeException('Invalid type specified for Parser::getMessageBody. "type" can either be text, html or calendar.');
 		}
 		return $headers;
 	}
